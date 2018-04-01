@@ -96,7 +96,7 @@ qemu-system-x86_64 -kernel /home/zhuguanqi/linux-4.15.13/arch/x86/boot/bzImage -
 gdb -tui
 (gdb) file vmlinux 
 (gdb) target remote:1234 
-(gdb) break start_point
+(gdb) break start_kernel
 (gdb) c #运行到断点处
 ```
 
