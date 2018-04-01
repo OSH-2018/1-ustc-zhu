@@ -90,7 +90,7 @@ qemu-system-x86_64 -kernel /home/zhuguanqi/linux-4.15.13/arch/x86/boot/bzImage -
 #注意此处需要加上nokaslr使能够在断点处停止
 ```
 
-然后打开gdb,并在start_point处设置断点
+然后打开gdb,并在start_kernel处设置断点
 
 ```
 gdb -tui
