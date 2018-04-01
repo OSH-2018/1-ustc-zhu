@@ -102,7 +102,7 @@ gdb -tui
 
 #### 1.start_kernel
 
-![](C:\Users\guanq\Desktop\png\start_kernel.png)
+![](1-ustc-zhu/png/start_kernel.png )
 
 ```
 asmlinkage __visible void __init start_kernel(void)
