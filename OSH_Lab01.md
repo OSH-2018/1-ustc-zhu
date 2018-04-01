@@ -102,7 +102,7 @@ gdb -tui
 
 #### 1.start_kernel
 
-![](1-ustc-zhu/png/start_kernel.png )
+![](https://github.com/OSH-2018/1-ustc-zhu/blob/master/png/start_kernel.png)
 
 ```
 asmlinkage __visible void __init start_kernel(void)
