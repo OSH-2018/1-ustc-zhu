@@ -90,19 +90,19 @@ qemu-system-x86_64 -kernel /home/zhuguanqi/linux-4.15.13/arch/x86/boot/bzImage -
 #注意此处需要加上nokaslr使能够在断点处停止
 ```
 
-然后打开gdb,并在start_point处设置断点
+然后打开gdb,并在start_kernel处设置断点
 
 ```
 gdb -tui
 (gdb) file vmlinux 
 (gdb) target remote:1234 
-(gdb) break start_point
+(gdb) break start_kernel
 (gdb) c #运行到断点处
 ```
 
 #### 1.start_kernel
 
-![](C:\Users\guanq\Desktop\png\start_kernel.png)
+![](https://github.com/OSH-2018/1-ustc-zhu/blob/master/png/start_kernel.png)
 
 ```
 asmlinkage __visible void __init start_kernel(void)
@@ -349,7 +349,7 @@ char *after_dashes
 
 #### 2.set_task_stack_end_magic(&init_task)
 
-![](C:\Users\guanq\Desktop\png\set_task_stack_end_magic(&init_task).png)
+![](https://github.com/OSH-2018/1-ustc-zhu/blob/master/png/set_task_stack_end_magic(%26init_task).png)
 
 ```
 set_task_stack_end_magic(struct task_struct *tsk)
@@ -368,9 +368,9 @@ set_task_stack_end_magic(struct task_struct *tsk)
 
 
 
-![](C:\Users\guanq\Desktop\png\boot_cpu_init.png)
+![](https://github.com/OSH-2018/1-ustc-zhu/blob/master/png/boot_cpu_init.png)
 
-![](C:\Users\guanq\Desktop\png\boot_inside.png)
+![](https://github.com/OSH-2018/1-ustc-zhu/blob/master/png/boot_inside.png)
 
 ```
 static void __init boot_cpu_init(void)
@@ -403,13 +403,13 @@ set_cpu_possible(cpu, true);
 
 #### 4.setup_arch(&command_line)
 
-![](C:\Users\guanq\Desktop\png\setup_arch.png)
+![](https://github.com/OSH-2018/1-ustc-zhu/blob/master/png/setup_arch.png)
 
 我们进入到指定的体系架构的初始函数，Linux 内核初始化体系架构相关调用`setup_arch`函数。`setup_arch`函数定义在[arch/x86/kernel/setup.c](https://github.com/torvalds/linux/blob/master/arch/x86/kernel/setup.c) 文件中，此函数就一个参数-内核命令行。
 
 #### 5.rest_init()
 
-![](C:\Users\guanq\Desktop\png\rest_init.png)
+![](https://github.com/OSH-2018/1-ustc-zhu/blob/master/png/rest_init.png)
 
 
 
